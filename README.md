@@ -15,7 +15,9 @@ It adheres to the requirements and instructions provided in the "Data Structures
 Directory Structure
 
 /Jongkuch1-DSA_SparseMatrix/sparse_matrix/code/src/ - Source code
+
 /Jongkuch1-DSA_SparseMatrix/sparse_matrix/sample_inputs/ - Input files
+
 /Jongkuch1-DSA_SparseMatrix/output/ - Output files
 
 Ensure that the sample_inputs directory contains the input files (e.g., matrix1.txt, matrix2.txt) and that the output directory exists for storing results.
