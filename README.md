@@ -1,98 +1,41 @@
 # Jongkuch1-DSA_SparseMatrix
-# DSA HW01 - Sparse Matrix Implementation
+Sparse Matrix Implementation
+Overview
+This project implements a sparse matrix data structure optimized for memory and runtime efficiency.
+The program supports loading sparse matrices from files, performing addition, subtraction, and multiplication operations, and saving results to output files.
+It adheres to the requirements and instructions provided in the "Data Structures and Algorithms for Engineers" programming assignment.
+Directory Structure
+/Jongkuch1-DSA_SparseMatrix/sparse_matrix/code/src/ - Source code
 
-## Academic Integrity Statement
-**I confirm that this submission is my own original work and complies with all academic integrity policies.** All code was written independently without using unauthorized sources or external libraries beyond basic Python standard libraries.
+/Jongkuch1-DSA_SparseMatrix/sparse_matrix/sample_inputs/ - Input files
 
-## Implementation Overview
-A memory-efficient sparse matrix implementation supporting:
-- Matrix addition
-- Matrix subtraction  
-- Matrix multiplication
-- File I/O operations
+/Jongkuch1-DSA_SparseMatrix/output/ - Output files
 
-## Features
-✅ Strict file format validation  
-✅ Handles whitespace and malformed input  
-✅ Efficient sparse storage (O(n) space)  
-✅ Full exception handling  
-✅ Interactive command-line interface  
+Ensure that the sample_inputs directory contains the input files (e.g., matrix1.txt, matrix2.txt) and that the output directory exists for storing results.
 
-## File Structure
-sparse_matrix/
-├── code/
-│ ├── src/
-│ │ ├── sparse_matrix.py # Main implementation
-│ │ └── main.py # CLI interface
-├── sample_inputs/ # Test matrices
-│ ├── matrix1.txt
-│ └── matrix2.txt
-├── output/ # Generated results
-│ ├── addition_result.txt
-│ └── multiplication_result.txt
-└── tests/ # Unit tests
-└── test_sparse_matrix.py
-
-
-## How to Run
-### Command Line Interface
-```bash
-python3 sparse_matrix/code/src/main.py
-Unit Tests
-bash
-python3 -m unittest discover sparse_matrix/tests
-Matrix File Format
-rows=<integer>
-cols=<integer> 
-(<row>, <column>, <value>)
+Features
+File Parsing:
+Reads sparse matrices from files in the format:
+rows=8433
+cols=3180
+(0, 381, -694)
+(0, 128, -838)
 ...
-Example:
-
-rows=3
-cols=3
-(0, 0, 1.5)
-(1, 2, 3.0)
-Implementation Details
-Key Algorithms
-Addition/Subtraction
-
-O(n + m) time complexity
-
-Union of non-zero coordinates
-
-Multiplication
-
-O(n * k) time complexity
-
-Column-major optimization
-
-Custom Functions
-_parse_matrix_element() - Strict format validator
-
-_validate_dimensions() - Matrix operation checker
-
-save_to_file() - Standardized output writer
-
-Academic Compliance
-No External Libraries
-
-Pure Python implementation
-
-No regex or matrix libraries
-
-Complete Documentation
-
-Method-level docstrings
-
-Inline comments for complex logic
-
-Error Handling
-
-ValueError for invalid operations
-
-File format validation
-
-Sample Test Cases
-Test File	Operation	Verification
-matrix1.txt + matrix2.txt	Addition	Sum of corresponding elements
-matrix1.txt × matrix2.txt	Multiplication	Dot product validation
+Handles whitespace, ignores invalid lines, and raises errors for incorrect formats.
+Matrix Operations:
+Addition: Adds two matrices with the same dimensions.
+Subtraction: Subtracts one matrix from another with the same dimensions.
+Multiplication: Multiplies two matrices where the number of columns in the first matrix matches the number of rows in the second matrix.
+Efficient Storage:
+Uses a dictionary to store only non-zero elements, minimizing memory usage.
+Error Handling:
+Ensures robust error handling for invalid inputs, mismatched dimensions, and out-of-bounds indices.
+Output Format:
+Saves results in the same sparse matrix format as the input files.
+Requirements
+Python 3.x
+No external libraries are used; all functionality is implemented from scratch.
+Installation and Setup
+Clone the Repository:
+git clone https://github.com/Jongkuch1/Jongkuch1-DSA_SparseMatrix.git
+cd Jongkuch1-DSA_SparseMatrix
