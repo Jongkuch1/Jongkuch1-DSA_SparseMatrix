@@ -33,7 +33,7 @@ cols=3180
 
 (0, 128, -838)
 
-...
+
 Handles whitespace, ignores invalid lines, and raises errors for incorrect formats.
 
 Matrix Operations:
